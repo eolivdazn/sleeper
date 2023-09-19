@@ -1,20 +1,28 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
 import { ReservationsRepository } from './reservations.repository';
+import { ClientProxy } from '@nestjs/microservices';
+import { PAYMENTS_SERVICE } from '@app/common';
 
 @Injectable()
 export class ReservationsService {
   constructor(
     private readonly reservationsRepository: ReservationsRepository,
+    @Inject(PAYMENTS_SERVICE) private readonly paymentsService: ClientProxy,
   ) {}
 
   create(createReservationDto: CreateReservationDto, userId: string) {
-    return this.reservationsRepository.create({
-      ...createReservationDto,
-      timestamp: new Date(),
-      userId,
-    });
+    this.paymentsService
+      .send('create_charge', createReservationDto.charge)
+      .subscribe(async (response) => {
+        console.log(response,"response");
+        const reservation = await this.reservationsRepository.create({
+          ...createReservationDto,
+          timestamp: new Date(),
+          userId,
+        });
+      });
   }
 
   findAll() {

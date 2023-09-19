@@ -83,6 +83,9 @@ dependencies:
   rxjs:
     specifier: ^7.2.0
     version: 7.5.7
+  stripe:
+    specifier: 11.9.1
+    version: 11.9.1
 
 devDependencies:
   '@nestjs/cli':
@@ -5928,6 +5931,14 @@ packages:
   /strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+
+  /stripe@11.9.1:
+    resolution: {integrity: sha512-obmTRAUC1UKlb3pOlF1tBA31Zo+FBMjnG69aGGTAeq35NlzffxjMjVgh3a55f9jK98FhHkIvY5z0W1FfQymNlQ==}
+    engines: {node: '>=12.*'}
+    dependencies:
+      '@types/node': 16.18.3
+      qs: 6.11.0
+    dev: false
 
   /strnum@1.0.5:
     resolution: {integrity: sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==}
