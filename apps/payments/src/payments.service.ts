@@ -18,7 +18,7 @@ export class PaymentsService {
     // });
 
     const paymentIntent = await this.stripe.paymentIntents.create({
-      amount: 500,
+      amount: amount * 100,
       currency: 'gbp',
       payment_method: 'pm_card_visa',
     });
