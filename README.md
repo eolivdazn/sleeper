@@ -71,3 +71,17 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+#### Notes
+
+```
+In the app path
+docker build -t payments -f . ../../
+docker tag payments europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production
+docker image push europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production
+
+
+
+```
