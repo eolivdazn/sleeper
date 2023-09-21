@@ -24,7 +24,12 @@ export class PaymentsService {
       payment_method: 'pm_card_visa',
     });
 
-    this.notificationsService.emit('notify_email', { email, amount, card });
+    this.notificationsService.emit('notify_email', {
+      email,
+      text: `Payment received for £${amount * 100} with card ${card.number} ${
+        card.exp_month
+      }/${card.exp_year} and CVC ${card.cvc} `,
+    });
     return paymentIntent;
   }
 }
