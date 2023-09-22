@@ -81,7 +81,11 @@ In the app path
 docker build -t payments -f . ../../
 docker tag payments europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production
 docker image push europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production
+```
 
-
-
+Setup kube
+```angular2html
+kubectl create secret docker-registry gcr-json-key --docker-server=europe-southwest1-docker.pkg.dev --docker_username=_json_key --docker-password="$(cat ../sleeper-399616-b30516f4bfd3.json)"
+kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name":"gcr-json-key"}]}'
+kubectl create deployment reservations --image=europe-southwest1-docker.pkg.dev/sleeper-399616/reservations/production --dry-run=client -o yaml>deployment.yaml
 ```
