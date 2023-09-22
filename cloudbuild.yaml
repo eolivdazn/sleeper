@@ -1,5 +1,5 @@
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [
           'build',
           '-t',
@@ -8,11 +8,11 @@ steps:
           'apps/reservations/Dockerfile',
           '.'
         ]
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/reservations/production' ]
 
     #    auth
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build',
       '-t',
@@ -21,11 +21,11 @@ steps:
       'apps/auth/Dockerfile',
       '.'
     ]
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/auth/production' ]
 
 #    payments
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build',
       '-t',
@@ -34,11 +34,11 @@ steps:
       'apps/payments/Dockerfile',
       '.'
     ]
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production' ]
 
   # notifications
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build',
       '-t',
@@ -47,5 +47,5 @@ steps:
       'apps/notifications/Dockerfile',
       '.'
     ]
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/notifications/production' ]
