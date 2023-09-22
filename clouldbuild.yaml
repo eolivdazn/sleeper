@@ -1,0 +1,51 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [
+          'build',
+          '-t',
+          'europe-southwest1-docker.pkg.dev/sleeper-399616/reservations/production',
+          '-f',
+          'apps/reservations/Dockerfile',
+          '.'
+        ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/reservations/production' ]
+
+    #    auth
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [
+      'build',
+      '-t',
+      'europe-southwest1-docker.pkg.dev/sleeper-399616/auth/production',
+      '-f',
+      'apps/auth/Dockerfile',
+      '.'
+    ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/auth/production' ]
+
+#    payments
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [
+      'build',
+      '-t',
+      'europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production',
+      '-f',
+      'apps/payments/Dockerfile',
+      '.'
+    ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/payments/production' ]
+
+  # notifications
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [
+      'build',
+      '-t',
+      'europe-southwest1-docker.pkg.dev/sleeper-399616/notifications/production',
+      '-f',
+      'apps/notifications/Dockerfile',
+      '.'
+    ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/notifications/production' ]
