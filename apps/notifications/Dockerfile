@@ -9,14 +9,12 @@ COPY nest-cli.json nest-cli.json
 
 RUN npm install -g pnpm
 
-RUN pnpm install
-
-COPY apps/notifications /apps/notifications
-COPY libs /libs
+COPY apps/notifications apps/notifications
+COPY libs libs
 
 RUN pnpm install -r
 
-RUN pnpm run build
+RUN pnpm run build notifications
 
 FROM node:alpine as production
 
