@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - image: europe-southwest1-docker.pkg.dev/sleeper-399616/reservations/production
-        name: production
+        name: reservations
