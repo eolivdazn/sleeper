@@ -16,7 +16,7 @@ COPY libs /libs
 
 RUN pnpm install -r
 
-RUN pnpm run build auth
+RUN pnpm run build
 
 FROM node:alpine as production
 
