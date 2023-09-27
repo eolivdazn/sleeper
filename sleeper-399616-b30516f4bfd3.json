@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sleeper-399616",
+  "private_key_id": "b30516f4bfd36cf51fa726dee422b02f3dcdb9ba",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyv5Dn7c1Nlsn+\nsOFfVZDzJBwBVjMsLxNLKtDdNN1NxGc+r7Hg3P6CbbvV6a44gC11FORP41ff9QxG\neOqYBW1nyitHn7zTpiQdNHfhQZQrLpOMN4QQ15ENdvBYY9wvx6OOqYdqUMlAFPQt\nd+msRZM0jXXccDnZ35jEFubPbxeN1asI1D9ovtHn2Mn/wE0KG2+OJmhhA3DKhVxX\nY81jDDPw5vujC8kcqXrYERFfojoN+TU5GIwnmt9roF9cYqa1yvQfl5wCGKdpdrB6\nOtXPyK8fUPfJ2ZJ6lWSW6FYYsTkYGDO4KIax4KBW/zibZ0mzScsyawCWAy+z7bXm\niGKBPsppAgMBAAECggEADHMMMCMfY/KHIg6Gu+GVRWHz82HiEYc71EXooyd97F8s\nA7Ev9eXecg4bgYQThsrin59zYV8HrUj/cF8Wk7z5CDwL9KKa/7C4HjKb0NwE6lcF\nnsP1Fkk1SJdKmRVnbgp9CUAkdtKmmah78zjBVSbJYGUj2tUUKmkI1kt0CumFXfLw\nW4SJOO0oqbpQdMTKJ6u+fdylyOB6T/DHIdO6yDIAB35XLpp891eSr+GW9KHi0cOi\nbIU9vB7uctnVpq/Ofj1KK/wDjbMSCBPr65dtCSCBCoyVurTgT8HH5k80iwyBZjtZ\nTVkiyn3VPkEOKM7gACf+I5af2367XwzVp3CG76+9OwKBgQDphqUKZq+XkY+F0Ex4\nUI9Ng9gbDV/Pv6IwvG0bJ7qrUQ1iHGIbzv/WcuRsiAAKpI8aHltt1i+yQdNa3g0J\npaVGC/uHe0barmWRVHpKDh6m0UZ/9DtOELoOFEvPqELu1JSBFUtnWtNTiVaKvnRa\nh3xMri+jGzveDh7TX1J27+Y87wKBgQDD816ylaAz3Zew35oHdLVuMp+IcF42mQef\nG0QPMmKZVo3gBywK6zQHwJsAFIXPE82lbe58qSeBhv+MzpD/WXZkK1K/NZn7cPQD\nfzA0O55p1WxK8zmmVJhrc/B28gpgqAhryi7Na7Za52KbFQ9hTWXjfjdNUgcfhRla\ns/TP/XCeJwKBgQDAJjcEsOuIlo/2tidF1Full3epAr80bOUinthTwMP7FO0jLmGX\nqiKerNjBaMJH/5F0F0h5vwRt83XaTd2Cc5bjZRapKslpRJh0FYOuDaIw9v/AZxCp\nMmA1F4QtsLCqXaZ39DKgL361PMtFzGJm3xZq7eRqnA0NsKaym7t5+/mBZwKBgQCz\nz6EniYw/6+kmApoKm3tdyxCAGHUr7tOCmnei5l56TWXVnV86CcluD71snmiHtKly\nU+WT+XlqL+JTaL6/w22Tz/mXwu0xQd55Uv59//OHNLSyNm3Bh0Fy4SpZTBRfy/Im\nT5sRH/Vvh4MBwpqhdG+6CXlf95TXxMCWbiqJrgzo4wKBgF2bco7hJVE/AY1ZVvb5\ndGgeaAS4/XGRvau+Zp/x5c/vYqgDI2idz2FfS9dkPs63f/1lruvm8N6CBpV6U6Xx\nBSBzdULD1wB6cvhHGWDqqpjfoyaPXTsoqKhHr6wLDwYA/uAtM8kX8aiZ6HEqny2Z\nkmCC0DkCC3CeaBcMmPL9wbna\n-----END PRIVATE KEY-----\n",
+  "client_email": "artifactory-pull-images@sleeper-399616.iam.gserviceaccount.com",
+  "client_id": "104667274746761552060",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/artifactory-pull-images%40sleeper-399616.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
