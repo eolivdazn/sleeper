@@ -50,6 +50,8 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/notifications/production' ]
 
-  - name: 'node'
-    entrypoint: 'npm'
-    args: [ 'test:e2e' ]
+  - name: 'docker/compose:1.29.2'
+    args: ['-f','e2e/docker-compose.yaml', 'up']
+
+
+
