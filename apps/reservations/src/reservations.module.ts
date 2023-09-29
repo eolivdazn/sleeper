@@ -6,8 +6,9 @@ import {
   DatabaseModule,
   LoggerModule,
   AUTH_SERVICE,
-  PAYMENTS_SERVICE, HealthModule
-} from "@app/common";
+  PAYMENTS_SERVICE,
+  HealthModule,
+} from '@app/common';
 import { ReservationsRepository } from './reservations.repository';
 import {
   ReservationDocument,

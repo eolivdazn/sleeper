@@ -1,8 +1,8 @@
 describe('Health', () => {
   let jwt = '';
   const createReservation = {
-    startDate: '12/12/12',
-    endDate: '12/12/12',
+    startDate: '2012-12-:00:00.000Z',
+    endDate: '2012-12-12T00:00:00.000Z',
     placeId: 'Montreux',
     charge: {
       amount: 401,
@@ -17,7 +17,6 @@ describe('Health', () => {
   const randomNumber = Math.floor(Math.random() * 555555555);
   const user = {
     email: `sleeprexercise+${randomNumber}@gmail.com`,
-    // email: `sleeprexercise@gmail.com`,
     password: 'strongPassword123!@#!',
   };
 
@@ -33,9 +32,7 @@ describe('Health', () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
     });
-    console.log('response', response.headers.get('set-cookie'));
-    jwt = response.headers.get('set-cookie').split('=')[1];
-    console.log('jwt', jwt);
+    jwt = response.headers.get('set-cookie').split('=')[1].split(';')[0];
   });
   test('create reservation..', async () => {
     const newReservation = await fetch(
@@ -43,8 +40,8 @@ describe('Health', () => {
       {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json,',
-          Authentication: jwt,
+          'Content-Type': 'application/json',
+          authentication: jwt,
         },
         body: JSON.stringify(createReservation),
       },
