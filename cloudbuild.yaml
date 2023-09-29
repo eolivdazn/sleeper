@@ -49,3 +49,7 @@ steps:
     ]
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'europe-southwest1-docker.pkg.dev/sleeper-399616/notifications/production' ]
+
+  - name: 'node'
+    entrypoint: 'npm'
+    args: [ 'test:e2e' ]
