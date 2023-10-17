@@ -19,7 +19,7 @@ import { authContext } from './auth.context';
           supergraphSdl: new IntrospectAndCompose({
             subgraphs: [
               {
-                name: 'reservation',
+                name: 'reservations',
                 url: configService.getOrThrow('RESERVATIONS_GRAPHQL_URL'),
               },
             ],
@@ -46,7 +46,7 @@ import { authContext } from './auth.context';
           transport: Transport.TCP,
           options: {
             host: configService.getOrThrow('AUTH_HOST'),
-            port: configService.getOrThrow('PORT'),
+            port: configService.getOrThrow('AUTH_PORT'),
           },
         }),
         inject: [ConfigService],
