@@ -1,12 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { LoggerModule } from '@app/common';
+import { AUTH_SERVICE, LoggerModule } from '@app/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloGatewayDriver, ApolloGatewayDriverConfig } from '@nestjs/apollo';
-import { IntrospectAndCompose, RemoteGraphQLDataSource } from "@apollo/gateway";
+import { IntrospectAndCompose, RemoteGraphQLDataSource } from '@apollo/gateway';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { authContext } from './auth.context';
-import { request } from "express";
 
 @Module({
   imports: [
@@ -42,7 +41,7 @@ import { request } from "express";
     }),
     ClientsModule.registerAsync([
       {
-        name: 'AUTH_SERVICE',
+        name: AUTH_SERVICE,
         useFactory: (configService: ConfigService) => ({
           transport: Transport.TCP,
           options: {

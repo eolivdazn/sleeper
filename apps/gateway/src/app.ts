@@ -1,4 +1,4 @@
-import { INestApplication } from "@nestjs/common";
+import { INestApplication } from '@nestjs/common';
 
 let app: INestApplication;
 const setApp = (_app: INestApplication) => {

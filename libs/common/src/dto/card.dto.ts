@@ -1,7 +1,7 @@
 import { IsCreditCard, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { Field, InputType } from '@nestjs/graphql';
 
-InputType();
+@InputType()
 export class CardDto {
   @IsString()
   @IsNotEmpty()
