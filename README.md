@@ -149,5 +149,22 @@ esc x (save and exit)
 kubectl rollout restart deployment notifications
 ```
 
+### grpahql
+nest g app gateway 
+pnpm i --save @apollo/gateway @apollo/server @apollo/subgraph @nestjs/apollo @nestjs/graphql  graphql 
+go to docker compose and create a new service 
+ - go to module and define the logger and the config import[]
+ - go to main and add the config and the logger
+ - remove gateway controller and service
+ - setup graphql module
+Setup graphQL in the apps
+ -  setup graphql module appoloFederationDriver
+ -  create a resolver
+   - add query and mutation
+- Update the schema
+- Update the Dto
+- Add the resolver to the app module as provider
 
-```
+#### Add the context user files ( app.ts auth.context.ts)
+- in the module add service  and build service to set the user in the context
+- refactor the current-user decorator to use the context
